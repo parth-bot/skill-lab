@@ -45,7 +45,15 @@ These values live in `config.py` and must not be changed after seeing results.
 ## 4. Results
 
 <!-- RESULTS_START -->
-Run `python run_arena.py` to fill this table.
+| Metric | A (champion) | B (challenger) | B - A | Better |
+|---|---|---|---|---|
+| accuracy | 0.467 | 0.820 | +0.353 | higher |
+| macro_precision | 0.497 | 0.813 | +0.315 | higher |
+| macro_recall | 0.551 | 0.833 | +0.282 | higher |
+| macro_f1 | 0.425 | 0.820 | +0.395 | higher |
+| avg_latency_ms | 26.0 | 47.7 | +21.7 | lower |
+| p95_latency_ms | 34.1 | 57.3 | +23.2 | lower |
+| total_inference_s | 3.9 | 7.2 | +3.2 | lower |
 <!-- RESULTS_END -->
 
 Plots and CSVs are in `outputs/` and in the MLflow runs. Up to 8 tweets where the models disagree are in `outputs/disagreements.csv`.
@@ -53,7 +61,9 @@ Plots and CSVs are in `outputs/` and in the MLflow runs. Up to 8 tweets where th
 ## 5. Decision
 
 <!-- DECISION_START -->
-Run `python run_arena.py`, then write your own explanation here.
+_Auto-generated draft, rewrite this in your own words after reading the results._
+
+A = `lxyuan/distilbert-base-multilingual-cased-sentiments-student`, B = `cardiffnlp/twitter-roberta-base-sentiment-latest`. Challenger wins: macro-F1 gain +0.395 >= 0.02 and latency 1.8x is inside the 4x limit. Winner: **Model B**.
 <!-- DECISION_END -->
 
 ## 6. Limitations and declaration

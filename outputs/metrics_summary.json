@@ -1,0 +1,26 @@
+{
+  "decision": "Challenger wins: macro-F1 gain +0.395 >= 0.02 and latency 1.8x is inside the 4x limit.",
+  "winner": "B",
+  "A": {
+    "accuracy": 0.4666666666666667,
+    "macro_precision": 0.4973924257078379,
+    "macro_recall": 0.5511731978713111,
+    "macro_f1": 0.42467332368888416,
+    "avg_latency_ms": 26.047509333244914,
+    "p95_latency_ms": 34.127329997863846,
+    "total_inference_s": 3.907126399986737
+  },
+  "B": {
+    "accuracy": 0.82,
+    "macro_precision": 0.8128203391361285,
+    "macro_recall": 0.8334179970972424,
+    "macro_f1": 0.8198426957320238,
+    "avg_latency_ms": 47.70923400006723,
+    "p95_latency_ms": 57.343419999961036,
+    "total_inference_s": 7.156385100010084
+  },
+  "models": {
+    "A": "lxyuan/distilbert-base-multilingual-cased-sentiments-student",
+    "B": "cardiffnlp/twitter-roberta-base-sentiment-latest"
+  }
+}
