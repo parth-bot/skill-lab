@@ -1,0 +1,10 @@
+mlruns/
+mlartifacts/
+mlflow.db
+*.db
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+mlflow_server.log
